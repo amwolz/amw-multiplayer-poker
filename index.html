@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amwpoker</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body onload="startPage()">
+    <h1></h1>
+    <div class="player" id="p1">
+        <h1>
+            <img src="/images/cards/back.png" alt="" id="p1c1" class="card">
+            <img src="/images/cards/back.png" alt="" id="p1c2" class="card">
+        </h1>
+        <div class="playerinfo">
+        <div class="imageu-container">
+            <img  id="userPic" alt="" class="playerimg">
+            <div class="imageu-overlay"></div>
+        </div>
+        <div class="infodiv" id="p1d">
+            <p id="userName"></p>
+        </div>
+        <div class="info">
+            <p class="i1"><img id="chips" src="images/chips.svg" alt=""><p class="i1" id="p1p1">###</p>
+            <img src="images/smallblind.webp" class="lbbbimg" id="p1sb" alt=""> <img src="images/bigblind.png" class="lbbbimg" id="p1bb"></p>
+            <p class="i1"><img class='arrow' src="images/arrow.png" alt=""><p class="inRound" id="p1p2"> test</p></p>
+        </div>
+        </div>
+    </div>
+    <div class="player" id="p2">
+        <h1>
+            <img src="/images/cards/back.png" alt="" id="p2c1" class="card">
+            <img src="/images/cards/back.png" alt="" id="p2c2" class="card">
+        </h1>
+        <div class="playerinfo">
+        <img src="images/player2.png" alt="" class="playerimg">
+        <div class="infodiv" id="p2d">
+            <p>Stephen</p>
+        </div>
+        <div class="info">
+            <p class="i1"><img id="chips" src="images/chips.svg" alt=""><p class="i1" id="p2p1">###</p>
+            <img src="images/smallblind.webp" class="lbbbimg" id="p2sb" alt=""> <img src="images/bigblind.png" class="lbbbimg" id="p2bb"></p>
+            <p class="i1"><img class='arrow' src="images/arrow.png" alt=""><p class="inRound" id="p2p2"> test</p></p>
+        </div>
+        </div>
+    </div>
+    <div class="player" id="p3">
+        <h1>
+            <img src="/images/cards/back.png" alt="" id="p3c1" class="card">
+            <img src="/images/cards/back.png" alt="" id="p3c2" class="card">
+        </h1>
+        <div class="playerinfo">
+        <img src="images/player3.png" alt="" class="playerimg">
+        <div class="infodiv" id="p3d">
+            <p>Alyssa</p>
+        </div>
+        <div class="info">
+            <p class="i1"><img id="chips" src="images/chips.svg" alt=""><p class="i1" id="p3p1">###</p>
+            <img src="images/smallblind.webp" class="lbbbimg" id="p3sb" alt=""> <img src="images/bigblind.png" class="lbbbimg" id="p3bb"></p>
+            <p class="i1"><img class='arrow' src="images/arrow.png" alt=""><p class="inRound" id="p3p2"> test</p></p>
+        </div>
+        </div>
+    </div>
+    <div class="player" id="p4">
+        <div id="p4Overlay">
+            <h1>
+                <img src="/images/cards/back.png" alt="" id="p4c1" class="card">
+                <img src="/images/cards/back.png" alt="" id="p4c2" class="card">
+            </h1>
+            <div class="playerinfo">
+            <img src="images/player4.png" alt="" class="playerimg">
+            <div class="infodiv" id="p4d">
+                <p>Eric</p>
+            </div>
+            <div class="info">
+                <p class="i1"><img id="chips" src="images/chips.svg" alt=""><p class="i1" id="p4p1">###</p>
+                <img src="images/smallblind.webp" class="lbbbimg" id="p4sb" alt=""> <img src="images/bigblind.png" class="lbbbimg" id="p4bb"></p>
+                <p class="i1"><img class='arrow' src="images/arrow.png" alt=""><p class="inRound" id="p4p2"> test</p></p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="player" id="p5">
+        <h1>
+            <img src="/images/cards/back.png" alt="" id="p5c1" class="card">
+            <img src="/images/cards/back.png" alt="" id="p5c2" class="card">
+        </h1>
+        <div class="playerinfo">
+        <img src="images/player5.png" alt="" class="playerimg">
+        <div class="infodiv" id="p5d">
+            <p>Alex</p>
+        </div>
+        <div class="info">
+            <p class="i1"><img id="chips" src="images/chips.svg" alt=""><p class="i1" id="p5p1">###</p>
+            <img src="images/smallblind.webp" class="lbbbimg" id="p5sb" alt=""> <img src="images/bigblind.png" class="lbbbimg" id="p5bb"></p>
+            <p class="i1"><img class='arrow' src="images/arrow.png" alt=""><p class="inRound" id="p5p2"> test</p></p>
+        </div>
+        </div>
+    </div>
+    <div class="player" id="dealer">
+        <img src="images/dealer1.png" alt="" class="playerimg">
+        <img src="images/cards/back.png" alt="" id="deckd" class="card">
+        <p id="total">0</p>
+    </div>
+
+    <div id="roundInfo">
+        <div class="row_a">
+            <img src="images/chipsStack.webp" id="potImg" class="i1" alt=""> <p class="i1" id="potAmount">pot</p>
+        </div>
+        <div class="row_b">
+            <img src="images/hand.png" id="handIMG" alt=""><p class="i1" id="roundInfoParagraph">###</p>
+        </div>
+    </div>
+    <div id="actionContainer">
+        <div class="action" id="raise" display="block">
+            <input type="range" id="myRange" name="myRange" min="0" max="100" value="0" oninput="updateTextbox()">
+            <br>
+            <label id="raiseLabel" for="myTextbox"  onclick="Actions.raiseAction()">Raise:</label>
+            <input type="text" id="myTextbox" name="myTextbox" value="0" oninput="updateSlider()">
+        </div>
+        <div class="action" id="allIn" onclick="Actions.allInAction()" display="none">
+            <p id="allInDisplay">All In</p>
+        </div>
+        <div class="action" id="check" onclick="Actions.checkcallAction()">
+            <p id="checkcallDisplay">Check Call Test</p>
+        </div>
+        <div class="action" id="fold" onclick="Actions.foldAction()">
+            <p>Fold</p>
+        </div>
+    </div>
+    <div id="cardContainer">
+        <div class="card" id="card1">
+            <img src="images/cards/back.png" alt="" id="card1Image">
+        </div>
+        <div class="card" id="card2">
+            <img src="images/cards/back.png" alt="" id="card2Image">
+        </div>
+        <div class="card" id="card3">
+            <img src="images/cards/back.png" alt="" id="card3Image">
+        </div>
+        <div class="card" id="card4">
+            <img src="images/cards/back.png" alt="" id="card4Image">
+        </div>
+        <div class="card" id="card5">
+            <img src="images/cards/back.png" alt="" id="card5Image">
+        </div>
+    </div>
+    <div id="endDisplay" class="endDisplay">
+        <div class="endDisplay-content">
+            <span class="closex" onclick="closeEndContent()">&times;</span>
+    
+            <div class="endContent">
+                <span class="close" onclick="closeEndContent()">Next Round</span>
+
+                <div id="displayCards">
+                    <img class="endCard" id="ec1" src="images/cards/back.png" alt="">
+                    <img class="endCard" id="ec2" src="images/cards/back.png" alt="">
+                    <img class="endCard" id="ec3" src="images/cards/back.png" alt="">
+                    <img class="endCard" id="ec4" src="images/cards/back.png" alt="">
+                    <img class="endCard" id="ec5" src="images/cards/back.png" alt="">
+                </div>
+                <div id="r1">
+                <img class="imageRank" src="images/male1.png" id="ranked1">    
+                <img class="endCard" id="r1c1" src="images/cards/back.png" alt="">
+                <img class="endCard" id="r1c2" src="images/cards/back.png" alt="">
+                <p class="ep1" id="r1p1">Card Type!</p>
+                <p class="ep2" id="r1p2">Won/Lost</p>
+                <p class="ep3" id="r1p3">Total</p>
+                </div>
+                <div id="r2">
+                <img class="imageRank" src="images/player2.png" id="ranked2">
+                <img class="endCard" id="r2c1" src="images/cards/back.png" alt="">
+                <img class="endCard" id="r2c2" src="images/cards/back.png" alt="">
+                <p class="ep1" id="r2p1">Card Type!</p>
+                <p class="ep2" id="r2p2">Won/Lost</p>
+                <p class="ep3" id="r2p3">Total</p>
+                </div>
+                <div id="r3">
+                <img class="imageRank" src="images/player3.png" id="ranked3">
+                <img class="endCard" id="r3c1" src="images/cards/back.png" alt="">
+                <img class="endCard" id="r3c2" src="images/cards/back.png" alt="">
+                <p class="ep1" id="r3p1">Card Type!</p>
+                <p class="ep2" id="r3p2">Won/Lost</p>
+                <p class="ep3" id="r3p3">Total</p>
+                </div>
+                <div id="r4">
+                <img class="imageRank" src="images/player4.png" id="ranked4">
+                <img class="endCard" id="r4c1" src="images/cards/back.png" alt="">
+                <img class="endCard" id="r4c2" src="images/cards/back.png" alt="">
+                <p class="ep1" id="r4p1">Card Type!</p>
+                <p class="ep2" id="r4p2">Won/Lost</p>
+                <p class="ep3" id="r4p3">Total</p>
+                </div>
+                <div id="r5">
+                <img class="imageRank" src="images/player5.png" id="ranked5">
+                <img class="endCard" id="r5c1"src="images/cards/back.png" alt="">
+                <img class="endCard" id="r5c2" src="images/cards/back.png" alt="">
+                <p class="ep1" id="r5p1">Card Type!</p>
+                <p class="ep2" id="r5p2">Won/Lost</p>
+                <p class="ep3" id="r5p3">Total</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="winner-container" id="winnerContainer">
+        <h1 class="winner-title">Winner</h1>
+        <p class="winner-name" id="winner-name">Player 1</p>
+        <img src="player4.png" alt="">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
