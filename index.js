@@ -1459,7 +1459,7 @@ function main() {
     // Frontend.hideDiv("cardContainer")
     // Frontend.changeImage("card1Image", "images/cards/clubs_2.png")
     
-    p1 = new Player(false, username, 'p1', charSelect, money=200);
+    p1 = new Player(false, username, 'p1', localStorage.getItem("charSelect"), money=200);
     p2 = new Player(false, "Stephen", 'p2', 'images/player2.png', money=200);
     p3 = new Player(false, "Alyssa", 'p3', 'images/player3.png', money=200);
     p4 = new Player(false, "Eric", 'p4', 'images/player4.png', money=200);
